@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
     padding: 4,
     color: "white",
   },
+  white: {
+    color: "white",
+  },
 });
 
 export default function StyleText({
@@ -27,6 +30,7 @@ export default function StyleText({
   bold,
   children,
   color,
+  white,
   style,
   ...restOfProps
 }) {
@@ -36,6 +40,7 @@ export default function StyleText({
     caption && styles.caption,
     text && styles.text,
     bold && styles.bold,
+    white && styles.white,
     style,
   ];
   return (
